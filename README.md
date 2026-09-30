@@ -55,3 +55,5 @@ You can launch and install the app as a native desktop application (`.exe` execu
 - **Return by Death (RBD) Loop Simulator**: Inspect all canonical loops, checkpoints, and causes of death.
 - **World Map Cartography**: Explore nations, climates, and borders across Lugunica, Vollachia, Kararagi, and Gusteko.
 - **Authority Mastery Tree**: Track Subaru's Witch Factor evolutions (Sloth, Greed, Gluttony).
+
+**Vibe Coded**
