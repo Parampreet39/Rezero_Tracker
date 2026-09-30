@@ -1,0 +1,6 @@
+{
+  "name": "Re:Zero Web Novel & Completionist Tracker",
+  "description": "Comprehensive chapter-by-chapter tracker and reading progress charts for Re:Zero Arcs 1 through 10, EX volumes, and IF routes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

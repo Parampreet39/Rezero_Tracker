@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Re:Zero · Rem Chronicle - Local Launcher</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #070d1e;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: linear-gradient(135deg, #0f172a 0%, #090e1a 100%);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 20px;
+      max-width: 640px;
+      width: 100%;
+      padding: 36px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(56, 189, 248, 0.1);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #38bdf8;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      margin-top: 14px;
+      color: #ffffff;
+    }
+    p.subtitle {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+    .status-box {
+      margin-top: 24px;
+      padding: 16px;
+      border-radius: 12px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #eab308;
+      box-shadow: 0 0 10px #eab308;
+    }
+    .dot.online {
+      background: #22c55e;
+      box-shadow: 0 0 10px #22c55e;
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      border: 1px solid #38bdf8;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+      transform: translateY(-1px);
+    }
+    .guide {
+      margin-top: 28px;
+      border-top: 1px solid #1e293b;
+      padding-top: 20px;
+    }
+    .guide h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      margin-bottom: 12px;
+    }
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13px;
+      color: #cbd5e1;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .step-num {
+      background: #1e293b;
+      color: #38bdf8;
+      font-weight: 700;
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-size: 11px;
+    }
+    code {
+      background: #1e293b;
+      color: #7dd3fc;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Re:Zero · Rem Chronicle 💙</div>
+    <h1>Local Application Launcher</h1>
+    <p class="subtitle">Web Novel, EX Novels, IF Routes & Completionist Tracker</p>
+
+    <div class="status-box">
+      <div class="status-indicator">
+        <span id="status-dot" class="dot"></span>
+        <span id="status-text">Probing local server (http://localhost:3000)...</span>
+      </div>
+      <a href="http://localhost:3000" target="_blank" id="quick-link" class="btn btn-primary" style="padding: 6px 14px; font-size: 12px;">Open Web App</a>
+    </div>
+
+    <div class="btn-group">
+      <a href="http://localhost:3000" target="_blank" class="btn btn-primary">
+        🚀 Launch App (http://localhost:3000)
+      </a>
+    </div>
+
+    <div class="guide">
+      <h2>How to Run Locally on Windows:</h2>
+      <div class="step-item">
+        <span class="step-num">A</span>
+        <div><strong>Recommended (1-Click):</strong> Double-click <code>start.bat</code>. It installs dependencies, verifies the build, starts the server, and automatically opens your browser.</div>
+      </div>
+      <div class="step-item">
+        <span class="step-num">B</span>
+        <div><strong>Rebuild 'dist' Folder:</strong> Double-click <code>build.bat</code>. It compiles a fresh <code>dist</code> production directory and stays open so you can view the output.</div>
+      </div>
+      <div class="step-item">
+        <span class="step-num">C</span>
+        <div><strong>Zero-Dependency Offline Runner:</strong> Double-click <code>run_offline.bat</code>. It runs with built-in Windows PowerShell or Python with 0 installs needed!</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Live probe to check if local server is already running
+    const dot = document.getElementById('status-dot');
+    const text = document.getElementById('status-text');
+
+    function checkServer() {
+      fetch('http://localhost:3000', { mode: 'no-cors' })
+        .then(() => {
+          dot.classList.add('online');
+          text.textContent = 'Server is ONLINE at http://localhost:3000';
+          text.style.color = '#4ade80';
+        })
+        .catch(() => {
+          dot.classList.remove('online');
+          text.textContent = 'Server not running yet. Run start.bat or run_offline.bat!';
+          text.style.color = '#fbbf24';
+        });
+    }
+
+    checkServer();
+    setInterval(checkServer, 3000);
+  </script>
+</body>
+</html>
