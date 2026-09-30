@@ -1,4 +1,6 @@
 # Re:Zero Completionist Tracker & Story Companion
+<img width="1472" height="1003" alt="image" src="https://github.com/user-attachments/assets/46c657ee-ae53-4637-87b3-90e3818ef88d" />
+<img width="1740" height="1034" alt="image" src="https://github.com/user-attachments/assets/0dc7f672-37f2-4d09-aaee-3e17b0906b7b" />
 
 An ultimate, spoiler-safe offline companion and story tracker for ***Re:Zero - Starting Life in Another World*** (Web Novel, Light Novel, Anime, Side Stories, EX Volumes, and "What IF" Timelines).
 
